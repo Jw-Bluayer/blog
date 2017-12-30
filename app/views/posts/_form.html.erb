@@ -17,12 +17,16 @@
   </div>
   <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
+  <!--   <%= f.text_area :content %>
   </div>
   <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image, accept: 'image/png,image/gif,image/jpeg' %>
   </div>
+  -->
+  <%= f.cktext_area :content %>
+  <div>
+    
   <div class="actions">
     <%= f.submit %>
   </div>

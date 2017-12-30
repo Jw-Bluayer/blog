@@ -7,6 +7,14 @@ GIT
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
 
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: 32bc0c6702388549cb4b3f00f82afbc3798d6891
+  specs:
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +70,9 @@ GEM
       xpath (~> 2.0)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
+    climate_control (0.2.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -120,6 +131,7 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    orm_adapter (0.5.0)
     public_suffix (3.0.1)
     puma (3.11.0)
     rack (2.0.3)
@@ -209,6 +221,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   carrierwave!
+  ckeditor!
   coffee-rails (~> 4.2)
   fog-aws
   jbuilder (~> 2.5)
