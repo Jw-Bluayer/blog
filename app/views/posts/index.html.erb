@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Song's blog</h1>
 
 <table>
   <thead>
@@ -15,7 +15,11 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.content %></td>
+        <% if post.content.split.size > 3 %>
+        <td><%= post.content.split[0...3].join(' ') %> ..</td>
+        <% else %>
+        <td><%= post.content%></td>
+        <% end %>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
