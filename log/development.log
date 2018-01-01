@@ -1118,3 +1118,72 @@ Migrating to DeviseCreateUsers (20171231121931)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 127.0.0.1 at 2018-01-01 11:16:29 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (22.1ms)
+Completed 401 Unauthorized in 3729ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/songjeongwoo/blog/app/assets/config
+  /Users/songjeongwoo/blog/app/assets/images
+  /Users/songjeongwoo/blog/app/assets/javascripts
+  /Users/songjeongwoo/blog/app/assets/stylesheets
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/bundler/gems/ckeditor-32bc0c670238/app/assets/images
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/bundler/gems/ckeditor-32bc0c670238/app/assets/javascripts
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/bundler/gems/ckeditor-32bc0c670238/app/assets/stylesheets
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/bundler/gems/ckeditor-32bc0c670238/vendor/assets/javascripts
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/gems/jquery-turbolinks-2.1.0/vendor/assets/javascripts
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /Users/songjeongwoo/.rvm/gems/ruby-2.3.1/gems/actionview-5.1.4/lib/assets/compiled
+  /Users/songjeongwoo/blog/node_modules):
+    4:     <title>Blog</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   
+   10: 	<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+  
+app/assets/javascripts/application.js:14
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2439496220426935138_70195898047340'
+Started GET "/" for 127.0.0.1 at 2018-01-01 11:17:59 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 4162ms (Views: 4146.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-01-01 11:18:06 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (23.1ms)
+  Rendered posts/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-01-01 11:18:12 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-01-01 11:18:20 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.1ms)
+  Rendered posts/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 77ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
